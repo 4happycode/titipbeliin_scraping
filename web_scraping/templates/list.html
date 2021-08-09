@@ -3,27 +3,36 @@
 
 {% block content %}
 
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th>product name</th>
-            <th>price</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for all_data in ls %}
-            <tr>
-                {% for key, value in all_data.items %}
-                    {% if key == 'name' %}
-                        <td>{{value}}</td>
-                    {% elif key == 'price' %}
-                        <td>{{value}}</td>
-                    {% endif %}    
-                {% endfor %}
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="container">
+    <br>
+	<div class="row border">
+		<div class="col-sm-12 text-center">Result list of scraping</div>
+	</div><br><br>
 
+    <div class="clearfix"></div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>product name</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for all_data in ls %}
+                <tr>
+                    {% for key, value in all_data.items %}
+                        {% if key == 'name' %}
+                            <td>{{value}}</td>
+                        {% elif key == 'price' %}
+                            <td>{{value}}</td>
+                        {% endif %}    
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
 	
 {% endblock %}
