@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}View List{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br>
+	<div class="row border">
+		<div class="col-sm-12 text-center">Detail Product</div>
+	</div><br><br>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>product name</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    {% for key, value in data.items %}
+                        {% if key == 'name' %}
+                            <td>{{value}}</td>
+                        {% elif key == 'price' %}
+                            <td>{{value}}</td>
+                        {% endif %}    
+                    {% endfor %}
+                </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <div class="row">
+        {% for image in images %}
+            <div class="col-md-3">
+                <div class="img-thumbnail">
+                    <a href="{{image.image_url}}">
+                        <img src="{{image.image_url}}" alt="Lights" style="width:100%" class="rounded">
+                        <!-- <div class="caption">
+                            <p>Lorem ipsum...</p>
+                        </div> -->
+                    </a>
+                </div><br>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+	
+{% endblock %}

@@ -75,7 +75,7 @@ class scraping():
                             'image_url' : image_uri,
                             'scraping_result_id':self.data.get('id')
                             } 
-                        ImageResult.objects.create(**image_result)
+                        ImageResult.objects.get_or_create(**image_result)
 
         self.product_name = self.product_name.text if self.product_name else ''
         self.product_price = self.product_price.text if self.product_price else ''
