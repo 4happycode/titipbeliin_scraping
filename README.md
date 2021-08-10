@@ -43,4 +43,4 @@ This repo is used as a part of a Titipbeliin backend test, Used Django, bs4 (Bea
 ## Documentation
 
     Read documentation for use this web (pdf)
-        [a link](https://bit.ly/TechnicalTestWari)
+        ## https://bit.ly/TechnicalTestWari
