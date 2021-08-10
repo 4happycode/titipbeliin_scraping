@@ -1,6 +1,6 @@
-# fastapi_sqlalchemy_alembic
+# Django For Scraping Ecommerce Website
 
-This repo is used as a part of a zicare backend test, Used Fastapi and pydantic with Sqlalchemy, mariadb, Alembic(for migrations).
+This repo is used as a part of a Titipbeliin backend test, Used Django, bs4 (BeautifulSoup) and default DB use sqlite3 .
 
 
 ## System Requirements
