@@ -40,7 +40,7 @@ This repo is used as a part of a Titipbeliin backend test, Used Django, bs4 (Bea
             password = admin
 
 
-## Documentation for use web (pdf)
+## Documentation
 
-    Read documentation
-        https://
+    Read documentation for use this web (pdf)
+        https://bit.ly/TechnicalTestWari
