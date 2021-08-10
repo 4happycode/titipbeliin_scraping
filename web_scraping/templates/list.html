@@ -14,8 +14,10 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
+                <th></th>
                 <th>product name</th>
                 <th>price</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -26,7 +28,13 @@
                             <td>{{value}}</td>
                         {% elif key == 'price' %}
                             <td>{{value}}</td>
-                        {% endif %}    
+                        {% elif key == 'id' %}
+                            <td>
+                                <a href="/detail/{{value}}">
+                                  <div style="height:100%;width:100%">details</div>
+                                </a>
+                              </td>
+                        {% endif %}
                     {% endfor %}
                 </tr>
             {% endfor %}

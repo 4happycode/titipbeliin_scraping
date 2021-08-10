@@ -39,7 +39,7 @@ def create_scraping(response):
             saving = f.save()
             # sync_to_async(ready_scraping(saving), thread_sensitive=False)
             scraping(saving)._process()
-            return HttpResponseRedirect('/list')
+            return HttpResponseRedirect('/detail/{}'.format(saving.get('id')))
     else:
         f = ScrapingForm()
     return render(response, "create.html", {"form": f})

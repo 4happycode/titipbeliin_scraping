@@ -79,7 +79,7 @@ class scraping():
 
         self.product_name = self.product_name.text if self.product_name else ''
         self.product_price = self.product_price.text if self.product_price else ''
-        self.data['name'] = self.product_name
+        self.data['name'] = self.product_name.replace('Details about  ', '')
         self.data['price'] = self.product_price
         
         ScrapingForm().update(self.data)
