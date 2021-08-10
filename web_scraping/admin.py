@@ -20,6 +20,7 @@ class ImageResultInline(admin.StackedInline):
 
 class ScrapingResultAdmin(admin.ModelAdmin):
     inlines = [ImageResultInline,]
+    list_per_page = 10
 
     # Cannot add from admin
     def has_add_permission(self, request, obj=None):

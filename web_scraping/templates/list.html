@@ -15,6 +15,7 @@
         <thead class="thead-dark">
             <tr>
                 <th></th>
+                <th>product url</th>
                 <th>product name</th>
                 <th>price</th>
                 
@@ -24,14 +25,24 @@
             {% for all_data in ls %}
                 <tr>
                     {% for key, value in all_data.items %}
-                        {% if key == 'name' %}
+                        {% if key == 'link' %}
+                            <td>
+                                <a href="{{value}}">
+                                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="{{value}}">
+                                        <div style="height:100%;width:100%">go_to_product</div>
+                                    </button>
+                                </a>
+                            </td>
+                        {% elif key == 'name' %}
                             <td>{{value}}</td>
                         {% elif key == 'price' %}
                             <td>{{value}}</td>
                         {% elif key == 'id' %}
                             <td>
                                 <a href="/detail/{{value}}">
-                                  <div style="height:100%;width:100%">details</div>
+                                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="/detail/{{value}}">
+                                        <div style="height:100%;width:100%">details</div>
+                                    </button>
                                 </a>
                               </td>
                         {% endif %}
